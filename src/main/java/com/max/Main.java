@@ -12,7 +12,7 @@
 
             // 用于保存所有线程对象的列表
             List<Thread> list = new ArrayList<>();
-            Lock lock=new ReentrantLock();
+            MyLock lock=new MyLock();
             // 创建100个线程，每个线程执行10次 count[0]--
             for (int i = 0; i < 100; i++) {
 
