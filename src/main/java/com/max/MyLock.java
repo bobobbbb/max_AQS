@@ -27,12 +27,12 @@ public class MyLock {
      * 3. 在队列中自旋等待直到成为队列首节点并成功获取锁
      */
     public void lock() {
-        // 尝试快速获取锁（无竞争情况）
-        if (flag.compareAndSet(false, true)) {
-            System.out.println(Thread.currentThread().getName()+"直接拿到了锁");
-            own = Thread.currentThread();
-            return; // 加锁成功，直接返回
-        }
+//        // 尝试快速获取锁（无竞争情况）
+//        if (flag.compareAndSet(false, true)) {
+//            System.out.println(Thread.currentThread().getName()+"直接拿到了锁");
+//            own = Thread.currentThread();
+//            return; // 加锁成功，直接返回
+//        }
 
         // 创建代表当前线程的节点
         Node curr = new Node();
