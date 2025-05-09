@@ -30,12 +30,10 @@
             for (Thread t : list) {
                 t.start();
             }
-
             // 等待所有线程执行完毕
             for (Thread t : list) {
                 t.join();
             }
-
            //最终结果应该是0
             System.out.println(count[0]);
         }
